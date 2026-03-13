@@ -26,7 +26,7 @@ use ElevenElo\Exception\RateLimitException;
  */
 class Client
 {
-    private const DEFAULT_BASE_URL = 'https://11elo.com';
+    private const DEFAULT_BASE_URL = 'https://api.11elo.com';
     private const DEFAULT_TIMEOUT  = 30;
 
     private string $baseUrl;
@@ -145,14 +145,14 @@ class Client
     {
         if ($statusCode === 401) {
             throw new AuthenticationException(
-                'Invalid or missing API key. Obtain one at https://11elo.com/developer',
+                'Invalid or missing API key. Obtain one at https://www.11elo.com/docs',
             );
         }
 
         if ($statusCode === 429) {
             $resetAt = $this->extractHeader($headers, 'X-RateLimit-Reset');
             throw new RateLimitException(
-                'Daily rate limit exceeded. Upgrade your plan at https://11elo.com/developer',
+                'Daily rate limit exceeded. Upgrade your plan at https://www.11elo.com/docs',
                 $resetAt,
             );
         }

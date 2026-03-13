@@ -48,7 +48,7 @@ class ClientTest extends TestCase
             ];
         };
 
-        return new Client(self::API_KEY, 'https://11elo.com', 30, $transport);
+        return new Client(self::API_KEY, 'https://api.11elo.com', 30, $transport);
     }
 
     /**
@@ -65,7 +65,7 @@ class ClientTest extends TestCase
             ];
         };
 
-        return new Client(self::API_KEY, 'https://11elo.com', 30, $transport);
+        return new Client(self::API_KEY, 'https://api.11elo.com', 30, $transport);
     }
 
     // -------------------------------------------------------------------------
