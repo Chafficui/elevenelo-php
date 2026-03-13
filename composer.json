@@ -24,8 +24,8 @@
     }
   },
   "support": {
-    "issues": "https://github.com/Chafficui/11elo-clients/issues",
-    "source": "https://github.com/Chafficui/11elo-clients/tree/main/php"
+    "issues": "https://github.com/Chafficui/11elo-sdk/issues",
+    "source": "https://github.com/Chafficui/11elo-sdk/tree/main/php"
   },
   "scripts": {
     "test": "phpunit"
